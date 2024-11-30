@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mailer SMS</title>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="icon" href="https://i.postimg.cc/D8rz8mGD/6188294648397676890-99.jpg">
+</head>
+<body>
+    <header class="header">
+        <div class="rotate"><h1 class="headding">Mailer <span>S</span><span>M</span><span>S</span></h1></div>
+        <ul>
+            <li>
+                <!--<a href="#" class="homeLink">Home</a>-->
+                
+                <a href="guide.html" class="guideLink">Guide</a>
+                <a href="#" class="aboutLink">About Us</a>
+                <a href="#" class="aboutLink"><i class='bx bx-info-circle'></i></a>
+                <!--<a href="#" class="portfolioLink">Portfolio</a>-->
+                <a href="#" class="contactLink">Contact Us</a>
+                <a href="#" class="contactLink"><i class='bx bx-phone-call' ></i></a>
+            </li>
+        </ul>
+    </header>
+    <section id="homeLink" class="main">
+        <div class="main-container">
+            <div class="inp-file-container">
+                <p class="p1">Upload Your File Here!</p>
+                <form id="uploadForm">
+                    <input type="file" id="fileInput" required>
+                    <label for="fileInput"><span>📂</span><p id="choose-a-file">Choose a file</p></label>
+                    <p id="fileName">No file choosen</p>
+                    <br><br>
+                    <button type="submit" id="fileSubmit">Upload</button>
+                </form>
+                <div class="link-copy-container">
+                    <p id="status"></p>
+                    <div class="link-copy-container-1">
+                        <a id="download-link" target="_blank">Link will appear here!</a>
+                        <div id="copyDiv">Copy</div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-file-container">
+                <iframe src="https://forms.gle/VLitfvF1kJnCUQ186" frameborder="0" id="iFrame"></iframe>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <footer class="footer">
+            <div class="footer-text">
+                <p>Copyright &copy; 2024 by SMSRam | All Right Reserved.</p>
+            </div>
+        </footer>
+    </footer>
+    
+    <script src="script.js"></script>
+</body>
+</html>

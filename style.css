@@ -1,0 +1,388 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap');
+body{
+    margin: 0;
+    padding: 0;
+    font-family: "Josefin Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    background-color: var(--bg-clr);
+    color: var(--text-clr);
+    overflow-x: hidden;
+}
+:root{
+    --bg-clr: black;
+    --bg2-clr: rgb(22, 22, 22);
+    --main-clr: orange;
+    --text-clr: white;
+    --main-bg-clr: rgb(0, 255, 221);
+    --white-hover-clr: rgb(214, 213, 213);
+}
+.header{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 4rem;
+    background-color: var(--bg-clr);
+    color: var(--text-clr);
+}
+.header .rotate{
+    left: 6%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 14rem;
+    height: 3rem;
+    border-radius: 6px;
+    position: relative;
+    z-index: 0;
+    overflow: hidden;
+}
+.header .rotate .headding{
+    z-index: 2;
+}
+.header .rotate .headding span:nth-child(1){
+    color: orange;
+}
+.header .rotate .headding span:nth-child(2){
+    color: skyblue;
+}
+.header .rotate .headding span:nth-child(3){
+    color: rgb(195, 0, 255);
+}
+.header .rotate::before{
+    content: '';
+    width: 13.4rem;
+    height: 2.8rem;
+    top: 0.1rem;
+    border-radius: 6px;
+    background-color: var(--bg-clr);
+    z-index: 1;
+    position: absolute;
+}
+.header .rotate::after{
+    content: '';
+    width: 20rem;
+    height: 2rem;
+    background-color: var(--main-clr);
+    position: absolute;
+    animation: rotate 6s linear infinite;
+}
+@keyframes rotate{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+.header ul{
+    position: absolute;
+    right: 0.8rem;
+    right: 6%;
+}
+.header ul li{
+    text-decoration: none;
+    list-style: none;
+    display: flex;
+}
+.header ul li a{
+    text-decoration: none;
+    color: var(--text-clr);
+    padding: 0.4rem;
+    transition: 0.5s ease;
+}
+.aboutLink .bx{
+    display: none;
+}
+.contactLink .bx{
+    display: none;
+}
+.header ul li a:hover{
+    color: var(--main-clr);
+}
+.header ul li a:nth-child(1){
+    background-color: var(--main-clr);
+    border-radius: 6px;
+    color: var(--text-clr);
+}
+.header ul li a:nth-child(1):hover{
+    box-shadow: 0 0 20px var(--main-clr);
+}
+.main-container{
+    width: 100vw;
+    min-height: 100vh;
+    background-color: var(--bg2-clr);
+    display: grid;
+    grid-template-columns: repeat(1, 2fr);
+    justify-content: center;
+    align-items: center;
+}
+.inp-file-container{
+    width: 80%;
+    min-height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--main-clr);
+    border-radius: 6px;
+    position: relative;
+    top: 2rem;
+    left: 10%;
+}
+.inp-file-container .p1{
+    top: 0;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+}
+.inp-file-container .p1::before{
+    content: "";
+    width: 50%;
+    height: 100%;
+    border-bottom: 2px solid;
+    transition: 0.5s ease;
+}
+.inp-file-container:hover .p1::before{
+    width: 100%;
+}
+#uploadForm{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#uploadForm input[type="file"]{
+    display: none;
+}
+#uploadForm label{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 8rem;
+    height: 8rem;
+    color: var(--bg-clr);
+    border-radius: 6px;
+    background-color: var(--text-clr);
+    cursor: pointer;
+    transition: 0.5s ease;
+}
+#uploadForm label:hover{
+    background-color: var(--white-hover-clr);
+}
+#uploadForm label span{
+    font-size: 2.8em;
+}
+#fileSubmit{
+    height: 2rem;
+    width: 4rem;
+    background-color: var(--text-clr);
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    transition: 0.5s ease;
+}
+#fileSubmit:hover{
+    background-color: var(--white-hover-clr);
+}
+.link-copy-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.link-copy-container-1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.4rem;
+    background-color: var(--white-hover-clr);
+    border-radius: 6px;
+    padding: 0.4rem;
+    color: var(--bg-clr);
+}
+.link-copy-container-1 #copyDiv{
+    background-color: var(--text-clr);
+    color: var(--bg-clr);
+    width: 4rem;
+    height: 2rem;
+    border-radius: 6px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+#iFrame{
+    display: none;
+    width: 80%;
+    height: 38rem;
+    margin-left: 10%;
+    margin-top: 10%;
+    overflow-y: hidden;
+    border-radius: 6px;
+}
+@media(max-width: 700px){
+    .header ul li a:nth-child(2){
+        display: none;
+    }
+    .header ul li a:nth-child(4){
+        display: none;
+    }
+    .aboutLink .bx{
+        display: block;
+    }
+    .contactLink .bx{
+        display: block;
+    }
+}
+.footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+
+/* Guide Page */
+.guideContainer{
+    width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--bg2-clr);
+}
+.guideWelcome{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+.guideContainer2{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 85%;
+    height: 100%;
+    padding: 2rem 9%;
+}
+.guideStepBodyDiv1{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+    justify-content: center;
+    text-align: center;
+}
+.guideStepBodyDiv1{
+    display: flex;
+}
+.guideStepBodyDiv1 img{
+    border-radius: 6px;
+    pointer-events: none;
+}
+ 
+.guideStepBodyDiv2{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+    justify-content: center;
+    text-align: center;
+}
+.guideStepBodyDiv2 img{
+    border-radius: 6px;
+    pointer-events: none;
+}
+ 
+.guideStepBodyDiv3{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+    justify-content: center;
+    text-align: center;
+}
+.guideStepBodyDiv3 img{
+    border-radius: 6px;
+    pointer-events: none;
+}
+ 
+.guideStepBodyDiv4{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+    justify-content: center;
+    text-align: center;
+}
+.guideStepBodyDiv4 img{
+    border-radius: 6px;
+    pointer-events: none;
+}
+
+.guideStepBodyDiv5{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+    justify-content: center;
+    text-align: center;
+}
+.guideStepBodyDiv5 img{
+    border-radius: 6px;
+    pointer-events: none;
+    width: 80%;
+}
+
+.guideStepBodyDiv6{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+    justify-content: center;
+    text-align: center;
+}
+.guideStepBodyDiv6 img{
+    border-radius: 6px;
+    pointer-events: none;
+}
+
+.guideStepBodyDiv7{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+    justify-content: center;
+    text-align: center;
+}
+.guideStepBodyDiv7 img{
+    border-radius: 6px;
+    pointer-events: none;
+    width: 60%;
+}
+
+.guideStepBodyDiv8{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+    justify-content: center;
+    text-align: center;
+}
+.guideStepBodyDiv8 img{
+    border-radius: 6px;
+    pointer-events: none;
+    width: 60%;
+}
+
+.guideStepBodyDiv9{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+    justify-content: center;
+    text-align: center;
+}
+.guideStepBodyDiv9 img{
+    border-radius: 6px;
+    pointer-events: none;
+    width: 60%;
+}
