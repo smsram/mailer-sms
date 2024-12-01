@@ -42,14 +42,19 @@ form.addEventListener('submit', async (e) => {
 /* Showing file name */
 const fileNameDisplay = document.getElementById("fileName");
 
-fileInput.addEventListener("change", () => {
+fileInput.addEventListener("change", (fileSubmit) => {
     fileNameDisplay.textContent = fileInput.files[0] ? fileInput.files[0].name : "No file chosen";
     if(fileNameDisplay.textContent = fileInput.files[0].name){
         document.getElementById("choose-a-file").textContent = "File Choosen";
+        fileSubmit = document.getElementById("fileSubmit");
+        fileSubmit.classList.add("files-uploading");
     }
     else{
         document.getElementById("choose-a-file").textContent = "Choose a file";
     }
+    fileSubmit.addEventListener('click', () => {
+        fileSubmit.classList.remove("files-uploading");
+    })
 });
 
 const copyDiv = document.getElementById("copyDiv");
