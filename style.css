@@ -41,6 +41,13 @@ body{
 }
 .header .rotate .headding{
     z-index: 2;
+    text-decoration: none;
+    color: var(--text-clr);
+}
+.header .rotate .headding a{
+    z-index: 2;
+    text-decoration: none;
+    color: var(--text-clr);
 }
 .header .rotate .headding span:nth-child(1){
     color: orange;
@@ -53,7 +60,7 @@ body{
 }
 .header .rotate::before{
     content: '';
-    width: 13.4rem;
+    width: 13.74rem;
     height: 2.8rem;
     top: 0.1rem;
     border-radius: 6px;
@@ -72,6 +79,7 @@ body{
 @keyframes rotate{
     0%{
         transform: rotate(0deg);
+        height: 2rem;
     }
     100%{
         transform: rotate(360deg);
@@ -178,6 +186,21 @@ body{
 }
 #uploadForm label span{
     font-size: 2.8em;
+    transition: 0.5s ease;
+}
+#uploadForm label:hover span{
+    animation: files-uploading 2s linear infinite;
+}
+@keyframes files-uploading{
+    0%{
+        opacity: 1;
+    }
+    50%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
 }
 #fileSubmit{
     height: 2rem;
@@ -187,6 +210,25 @@ body{
     border: none;
     cursor: pointer;
     transition: 0.5s ease;
+    font-family: "Josefin Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    transition: 2s ease-in-out infinite;
+}
+.files-uploading{
+    animation: fileSubmit 2s linear infinite;
+}
+@keyframes fileSubmit{
+    0%{
+        opacity: 1;
+    }
+    50%{
+        opacity: 0.5;
+    }
+    100%{
+        opacity: 1;
+    }
 }
 #fileSubmit:hover{
     background-color: var(--white-hover-clr);
@@ -219,6 +261,21 @@ body{
     align-items: center;
     cursor: pointer;
 }
+.link-copy-container-1-animation{
+    animation: copy-container-1-animation 2s linear infinite;
+}
+@keyframes copy-container-1-animation{
+    0%{
+        opacity: 1;
+    }
+    50%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
 #iFrame{
     display: none;
     width: 80%;
