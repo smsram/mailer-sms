@@ -19,7 +19,7 @@ form.addEventListener('submit', async (e) => {
 
     try {
         // Send the file to file.io API
-        const response = await fetch('https://file.io', {
+        const response = await fetch('http://localhost:3000/upload', {
             method: 'POST',
             body: formData,
         });
